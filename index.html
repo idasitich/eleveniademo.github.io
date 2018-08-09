@@ -1,0 +1,602 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style type="text/css">
+
+
+
+
+/*---------------------------------------------
+ 	Desktop 
+ ---------------------------------------------*/
+ body{
+ 	margin: 0 auto;
+ }
+.promo-page {
+	background-image: transparent;
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 980px;
+	display: block;
+	font-family: "Trebuchet MS", 'Helvetica', 'Droid Sans';
+	text-align: center;
+	font-size: 12px;
+}
+
+.column{
+	padding-bottom: 10px;
+	max-width: 980px;
+}
+.header-image img{
+ 	max-width: 100%;
+ 	height: auto;
+}
+
+.container-slide{
+	position: relative;
+}
+.container-slide img{
+	max-width: 100%;
+	height: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+}
+a.prev{
+	display: block;
+}
+img{
+	display: block;
+}
+
+.navbar{
+   overflow: hidden;
+}
+.column-navbar{
+   width:20%;
+/*   background:red; */
+   float:left;
+   min-height:1px;
+
+}
+.column-navbar a {
+   position: relative;
+   padding-bottom: 30%;
+   display: block;
+}
+.column-navbar a  img{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+
+}
+
+.column-navbar a:hover img{
+	opacity: 0.7;
+}
+.pointer {
+	cursor: pointer;
+	display: block;
+}
+
+.column-dropdown{
+	position: relative;
+	display: none;
+}
+.column-dropdown img{
+	max-width: 100%;
+	height: auto;
+}
+
+.column-dropdown a{
+	position: relative;
+	right: 50px;
+	top: 78px;
+}
+
+
+
+.column-dropdown a img{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	
+}
+.show {
+	display:block;
+}
+
+.container-tab{
+	overflow: hidden;
+}
+.tab{
+	float: left;
+}
+.row-tab{
+	width: 980px;
+}
+.tab-gambar{
+	overflow: hidden;
+}
+.tab-gambar .inner{
+	float: left;
+	width: 50%;
+	position: relative;
+	padding-bottom: 11%;
+}
+.tab-gambar .inner img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height:100%;
+	object-fit: cover;
+}
+.tab-gambar .inner.active {
+   border-bottom:solid;
+   border-width: 10px;
+   border-color:#2896a8;
+}
+
+.container-gambar{
+	overflow: hidden;
+	display: none;
+}
+.row-gambar{
+	float: left;
+	width: 25%;
+	min-height: 1pc;
+}
+.row-gambar .inner{
+	position: relative;
+	padding-bottom: 100%;
+}
+.row-gambar img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.red{
+	color:red;
+	font-size: 14px;
+
+}
+.box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+.overlay{
+	position: relative;
+}
+.overlay img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.column-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.sold{
+	opacity: 0;
+}
+.sold:hover{
+	opacity: 1;
+}
+/*---------------------------------------------
+
+ CSS codes for desktop here!  
+ 
+---------------------------------------------*/
+
+
+
+
+/*---------------------------------------------
+	Mobile Version 
+---------------------------------------------*/
+
+.mobile-promo-page {
+	display: none;
+}
+
+.mobile-promo-page {
+	width: 100%;
+	background-image: transparent;
+	background-repeat: repeat;
+	background-position: top center;
+	background-color: #fff;
+	position: relative;
+}
+
+.mobile-promo-page img {
+	max-width: 100%;
+}
+
+.mobile-promo-container {
+	width: 100%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0 auto;
+	font-family: "Trebuchet MS", 'Helvetica', 'Droid Sans';
+	text-align: center;
+	font-size: 12px;
+	line-height: 150%;
+	position:relative;
+	/* border:2px solid #404040; */
+}
+
+
+/*---------------------------------------------
+
+ CSS codes for mobile here!  
+
+---------------------------------------------*/
+@media (max-width:480px){
+
+}
+@media (max-width:640px){
+.column-navbar {
+ 	width: 100%;
+}
+.column-navbar a img {
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    object-fit: cover;
+}
+.column-navbar a {
+    position: relative;
+    padding-bottom: 10%;
+    display: block;
+}
+.tab-gambar .inner{
+	width: 100%;
+	padding-bottom: 7%;
+}
+.tab-gambar .inner img{
+	width: 64%;
+}
+
+}
+
+@media (max-width:992px){
+.column-dropdown {
+    position: relative;
+    display: block; 
+}
+}
+
+@media  (max-width:1200px){
+	
+}
+
+/*media (min-width: 480px) {
+	.mobile-promo-container {
+		width: 480px;
+	}
+}
+
+@media (min-width: 479px) and (max-width: 479px) {
+	.mobile-promo-container {
+		width: 460px;
+	}
+}*/
+
+</style>
+
+
+
+<div class="promo-page on-front">
+	<!-- HTML codes for desktop here! -->
+		<div class="column header-image">
+			<img src="Assets/header.jpg">
+		</div>
+
+		<div class="column">
+			<div class="navbar">
+				<div class="column-navbar"><a href="" ><img src="Assets/slice/slice1.jpg"></a></div>
+				<div class="column-navbar"><a href="" ><img src="Assets/slice/slice2.jpg"></a></div>
+				<div class="column-navbar"><a href="" ><img src="Assets/slice/slice3.jpg"></a></div>
+				<div class="column-navbar"><a href="" ><img src="Assets/slice/slice4.jpg"></a></div>
+				<div class="column-navbar"><a href="" ><img src="Assets/slice/slice5.jpg"></a></div>
+			</div>
+			<!-- code for dekstop 640 -->
+			
+		</div>
+		<div class="column slide">
+			<div class="container-slide">
+
+			      <div class="item">
+			        <img src="Assets/slide1.jpg">
+			      </div>
+
+			      <div class="item">
+			        <img src="Assets/slide2.jpg">
+			      </div>
+
+
+			    <!-- Left and right controls -->				
+			    <a class="prev" onclick="plusDivs(-1)"><img src="Assets/prev.png"></a>
+			    <a class="next"onclick="plusDivs(1)"><img src="Assets/next.png"></a>
+		  		
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="container-tab">
+				<div class="tab">
+					<div class="row-tab">
+						<div class="tab-gambar">
+						<div class="pointer tablinks inner active" onclick="openCity(event, 'tab1')" ><img src="Assets/slice/tab1.jpg">
+						</div>
+						<div class="pointer tablinks inner" onclick="openCity(event, 'tab2')"><img src="Assets/slice/tab2.jpg">
+						</div>
+						</div>
+						<div id="tab1" style="display: block;" class="container-gambar">
+							<div class="row-gambar">
+								<div class="inner">
+								<a href="">
+								<div class="column-overlay">
+								<img src="Assets/prd1.jpg">
+								</div>
+								<div class="box">
+									<span style="font-size: 16px">94<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								<div class="column-overlay sold" >
+								<img src="Assets/sold.png">
+								</div>
+								</a>	
+								</div>
+								<p>JAM TANGAN WANITA</p>
+								<p ><span style="text-decoration: line-through;font-size: 10px;">RP 1.500.000</span>
+									<br>
+									<span class="red">RP 92.100</span>
+								</p>
+							</div>	
+							<div class="row-gambar">
+								<div class="inner">
+								<a href="">
+								<div class="column-overlay">
+								<img src="Assets/prd2.jpg">
+								</div>
+								<div class="box">
+									<span style="font-size: 16px">93<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								</a>
+							    </div>
+							    <p>JAM TANGAN PRIA</p>
+								<p><span style="text-decoration: line-through;font-size: 10px;">RP 2.500.000</span>
+									<br>
+									<span class="red">RP 185.100</span>
+								</p>	
+							</div>	
+							<div class="row-gambar">
+								<div class="inner">
+								<a href="">
+								<div class="column-overlay">
+								<img src="Assets/prd3.jpg">
+								</div>
+								<div class="box">
+									<span style="font-size: 16px">92<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								</a>
+								</div>
+								<p>NEW LOVELY WOMEN BUCKLE</p>
+								<p><span style="text-decoration: line-through;font-size: 10px;">RP 476.000</span>
+									<br>
+									<span class="red">RP 36.300</span>
+								</p>
+							</div>	
+							<div class="row-gambar">	
+								<div class="inner">
+								<a href="">
+								<div class="column-overlay">
+								<img src="Assets/prd4.jpg">
+								</div>
+								<div class="box">
+									<span style="font-size: 16px">91<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								</a>
+								</div>
+								<p>NEW MANS AUTOMATIC BUCKLE</p>
+								<p><span style="text-decoration: line-through; font-size: 10px;">RP 840.000</span>
+									<br>
+									<span class="red">RP 82.800</span>
+								</p>
+							</div>		
+							</div>
+							<div id="tab2" class="container-gambar">
+							<div class="row-gambar">
+								<div class="inner">
+								<img src="Assets/prd2.jpg">
+								<div class="box">
+									<span style="font-size: 16px">93<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+							    </div>
+							    <p>JAM TANGAN PRIA</p>
+								<p><span style="text-decoration: line-through;font-size: 10px;">RP 2.500.000</span>
+									<br>
+									<span class="red">RP 185.100</span>
+								</p>	
+							</div>	
+							<div class="row-gambar">
+								<div class="inner">
+								<img src="Assets/prd1.jpg">
+								<div class="box">
+									<span style="font-size: 16px">94<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								</div>
+								<p>JAM TANGAN WANITA</p>
+								<p ><span style="text-decoration: line-through;font-size: 10px;">RP 1.500.000</span>
+									<br>
+									<span class="red">RP 92.100</span>
+								</p>
+							</div>	
+							<div class="row-gambar">	
+								<div class="inner">
+								<img src="Assets/prd4.jpg">
+								<div class="box">
+									<span style="font-size: 16px">91<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								</div>
+								<p>NEW MANS AUTOMATIC BUCKLE</p>
+								<p><span style="text-decoration: line-through; font-size: 10px;">RP 840.000</span>
+									<br>
+									<span class="red">RP 82.800</span>
+								</p>
+							</div>		
+							<div class="row-gambar">
+								<div class="inner">
+								<img src="Assets/prd3.jpg">	
+								<div class="box">
+									<span style="font-size: 16px">92<span style="font-size: 10px">%</span></span><br>
+									<span style="font-size: 10px">OFF</span>
+								</div>
+								</div>
+								<p>NEW LOVELY WOMEN BUCKLE</p>
+								<p><span style="text-decoration: line-through;font-size: 10px;">RP 476.000</span>
+									<br>
+									<span class="red">RP 36.300</span>
+								</p>
+							</div>	
+							
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+		
+		
+		<div class="column">
+			<div class="dropdown">
+				<img class="pointer" onclick="myFunction()" src="Assets/syarat.jpg">
+				<div id="myDropdown" class="column-dropdown">
+					<img src="Assets/bawah.jpg">
+					<div class="btn">
+					<a href="" class="inner">
+					<img src="Assets/btn.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+
+<div class="mobile-promo-page on-mobile">
+	<div class="mobile-promo-container">
+		<!-- HTML codes for mobile here! -->
+		
+
+	</div>
+</div>
+
+					
+
+
+<script>
+
+// Slide------------
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("item");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+// tab--------------------------------
+
+function openCity(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("container-gambar");
+    for (i = 0 ; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+
+// dropdown-------------------
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.pointer')) {
+
+    var dropdowns = document.getElementsByClassName("column-dropdown");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>					
